@@ -6,11 +6,13 @@ var session = require('express-session');
 var usersController = require('../controllers/users');
 var staticController = require('../controllers/statics');
 
+var shelterControllers = require('../controllers/shelterControllers');
+
 router.route('/')
 	.get(staticController.index);
 
 router.route('/home')
-	.get(staticController.home);	
+	.get(shelterControllers.displayShelters);	
 
 
 router.route('/signup')

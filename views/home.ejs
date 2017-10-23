@@ -2,8 +2,14 @@
 <html>
 <head>
 	<title>Home Page</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"> 
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+
 	<style>
+    * {
+      box-sizing: border-box;
+    }
+
 		#user-menu {
           padding-right: 50px;
           margin-right: 0px;
@@ -15,9 +21,9 @@
 		
 		#grid-layout {
 			margin-left: 16%;
-			height: 1000px;
+			
 			width: 1140px;
-			background: url("https://images.pexels.com/photos/551628/pexels-photo-551628.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb") no-repeat;
+			background: grey;
 			background-size: cover;
 			border-radius: 30px;
 		}
@@ -42,6 +48,17 @@
           color: white;
           font-family: 'Bungee Inline';
           float: right;
+        }
+
+        div .card {
+          margin: 20px;
+          border: 2px solid black;
+          border-radius: 30px;
+          padding: 10px;
+        }
+
+        .card-img-top {
+            border-radius: 20px;
         }
 	</style>
 </head>
@@ -76,7 +93,18 @@
 
   <main>
 
-  	<div id="grid-layout">
+  	<div id="grid-layout" class="row justify-content-md-center">
+      <%for (let i = 0; i < shelters.length; i ++){%>
+          <div class="card col-md-5">
+            <img class="card-img-top" src="<%=shelters[i].image_url%>" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title"><%=shelters[i].name%></h4>
+              <h6 class="card-subtitle mb-2"><%=shelters[i].display_phone%> <br> <%=shelters[i].location.display_address%></h6>
+              <p class="card-text"><%shelters[i].rating%></p>
+            </div>
+          </div>
+              
+        <%}%>
 		
   	</div>	
 
@@ -86,8 +114,7 @@
     <!-- jQuery  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!-- Bootstrap -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
 
     <script src="Public/scripts/app.js"></script>
 
