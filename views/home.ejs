@@ -21,6 +21,7 @@
           background: black;
           color: white;
           border-radius: 10px 10px 10px 10px;
+          margin-top: 25px;
 
         }
 
@@ -40,23 +41,28 @@
       border: 2px solid white;
       color: white;
       display: inline;
+      margin-top: 25px;
     }
 
         #nav-header {
+          float: right;
+          padding-right: 20px;
+          
           margin-left: 20px;
+          margin-top: 25px;
           font-family: 'Bungee Inline';
           font-weight: 900;
-          color: grey;
-          font-size: 60px;
+          color: white;
+          font-size: 70px;
           margin-bottom: 15px;
-          -webkit-text-stroke-width: 1px;
-          -webkit-text-stroke-color: black;
+       
         }
 
         h1 {
           font-family: 'Bungee Inline';
           color: black;
           text-shadow: 2px 2px 2px grey;
+          margin-top: 15px;
           
         }
         #header-home {
@@ -92,6 +98,19 @@
         h4 {
           font-family: 'Bungee Inline';
           font-size: 25px;
+
+        }
+
+        #post-btn {
+          font-family: 'Bungee Inline'
+
+        }
+
+        #comment-box {
+          border: 3px solid black;
+          border-radius: 5px;
+          height: 35px;
+          width: 250px;
         }
 
 	</style>
@@ -108,8 +127,9 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
-        </button>
-        <a id="nav-header" class="navbar-brand">Home</a>
+        
+      </button>
+      
       </div>
 
 
@@ -121,6 +141,7 @@
            
             
         </ul>
+        <a id="nav-header" class="navbar-brand">Home</a>
       </div>
     </div>
   </nav>
@@ -139,6 +160,10 @@
               
               
             </div>
+              <form method="POST" action="/commentGrabber">
+                <input id="comment-box" type="text" name="comment" placeholder="Add a comment!"  />
+                <input id="post-btn" class="btn-secondary"  type="submit" value="Post"  />
+              </form> 
           </div>
               
         <%}%>
@@ -154,6 +179,16 @@
     
 
     <script>
+      $("form").on("submit", function(event) {
+        console.log('were doing shit');
+          event.preventDefault();
+          
+          var formData = $(this).serialize();
+          console.log(formData);
+          
+
+          console.log($("input[name=comment]").val());
+      });
 
     </script>
 

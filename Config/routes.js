@@ -28,6 +28,9 @@ router.route('/login')
 router.route('/logout')
 	.get(usersController.getLogout);
 
+router.route('/commentGrabber')
+	.post('/');	
+
 
 module.exports = router;
 
