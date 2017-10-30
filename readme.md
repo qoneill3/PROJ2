@@ -14,7 +14,14 @@ The Rescue Repository is an app that is hosted on Heroku and uses node.js for th
 
 ## Wireframes
 
+Log-In Page:
 ![alt text](images/log-in.png "Log-In Page")
+
+Home-Page:
+![alt text](images/home-page.png "Home-Page")
+
+Shelter-Page:
+![alt text](images/shelter-page.png "Shelter-Page")
 
 
 
