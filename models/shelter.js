@@ -9,7 +9,7 @@ var Shelter = new Schema({
 		display_address: String
 	},	
 	url: String,
-	comments: String
+	comments: [String]
 });
 
 module.exports = mongoose.model('Shelter', Shelter);

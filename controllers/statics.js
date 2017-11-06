@@ -2,11 +2,11 @@
 
 
 function index(req, res) {  
-  res.render('/Users/quinnoneill/WDI/PROJ2/views/index.ejs');
+  res.render('index.ejs');
 }
 
 function home(req, res) {
-	res.render('/Users/quinnoneill/WDI/PROJ2/views/home.ejs');
+	res.render('home.ejs');
 }
 
 module.exports = {

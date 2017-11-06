@@ -6,7 +6,7 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/shelters');
 
-let Shelter = require("./models/shelter");
+let Shelter = require("../models/shelter");
 
 
 
@@ -42,6 +42,7 @@ function displayShelters(token) {
 		console.log("creating db");
 	});
 }
+
 
 function getToken() {
 	request.post({

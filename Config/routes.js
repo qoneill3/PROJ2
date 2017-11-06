@@ -32,7 +32,7 @@ router.route('/login')
 router.route('/logout')
 	.get(usersController.getLogout);
 
-router.route('/commentGrabber')
+router.route('/commentGrabber/:id')
 	
 	.post(commentController.saveComments);	
 

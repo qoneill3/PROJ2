@@ -169,6 +169,13 @@
                 <input id="post-btn" class="btn-secondary"  type="submit" value="Post"  />
               </form> 
 
+              <div id="comments">
+                <%for (let index = 0; index < shelters[i].comments.length; index++) {%>
+                  <ul>
+                    <li><%=shelters[i].comments[index]%></li>
+                  </ul> 
+               <% } %>
+               </div>
               
           </div>
           <div>
@@ -176,7 +183,7 @@
 
           </div>    
         <%}%>
-		
+	
   	</div>	
 
 
@@ -201,7 +208,7 @@
 
           console.log($("input[name=comment]").val());
 
-          $.post('/commentGrabber', formData, ShelterId).done(function(responseData) {
+          $.post('/commentGrabber/'+ShelterId, formData).done(function(responseData) {
             console.log(responseData);
           });  
 
