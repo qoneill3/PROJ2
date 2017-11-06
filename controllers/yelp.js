@@ -3,11 +3,11 @@ const request = require('request');
 
 function grabToken (req,res,next ){
 	if (token) {
-		console.log("token exists");
+		// console.log("token exists");
 		req.token = token;
 		next();
 	} else {
-		console.log("grabbing token");
+		// console.log("grabbing token");
 		request.post({
 			url: "https://api.yelp.com/oauth2/token",
 			form: {
@@ -19,7 +19,7 @@ function grabToken (req,res,next ){
 			body = JSON.parse(body);
 			token = body.access_token;
 			req.token = token;
-			console.log(token);
+			// console.log(token);
 			next();
 		});
 	}

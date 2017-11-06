@@ -5,6 +5,9 @@ const path = require('path');
 var flash = require('flash');
 var session = require('express-session');
 
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended: true}));
+
 
 
 require('dotenv').config();
@@ -28,8 +31,8 @@ app.use(flash());
 
 require('./config/passport')(passport);
 
-let yelpToken = require('./controllers/yelp.js');
-app.use(yelpToken);
+//let yelpToken = require('./controllers/yelp.js');
+//app.use(yelpToken);
 
 app.use(function(req, res, next) {
 	res.locals.currentUser = req.user;

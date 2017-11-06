@@ -16,6 +16,7 @@
     }
 
 		#user-menu {
+
           padding-right: 50px;
           margin-right: 0px;
           background: black;
@@ -38,6 +39,7 @@
 
     #navbar-header {
       background: black;
+      min-width: 1140px;
       border: 2px solid white;
       color: white;
       display: inline;
@@ -150,22 +152,29 @@
 
   	<div id="grid-layout" class="row justify-content-md-center">
       <%for (let i = 0; i < shelters.length; i ++){%>
+         
           <div class="card col-md-5 text-center">
             <img class="card-img-top" src="<%=shelters[i].image_url%>" alt="Card image cap">
-            <div class="card-body">
+
+
+            <div data-id="<%=shelters[i]._id%>" class="card-body">
               <h4 class="card-title"><%=shelters[i].name%></h4>
               <h6 class="card-subtitle mb-2"><%=shelters[i].display_phone%> <br> <%=shelters[i].location.display_address%> <br> </h6>
               <p><a id="web-btn" href="<%=shelters[i].url%>" class="btn btn-primary" target="_blank">Website</a></p>
-
-              
-              
             </div>
-              <form method="POST" action="/commentGrabber">
+              
+              
+              <form data-id="<%=shelters[i]._id%>" method="POST" action="/commentGrabber">
                 <input id="comment-box" type="text" name="comment" placeholder="Add a comment!"  />
                 <input id="post-btn" class="btn-secondary"  type="submit" value="Post"  />
               </form> 
-          </div>
+
               
+          </div>
+          <div>
+
+
+          </div>    
         <%}%>
 		
   	</div>	
@@ -180,14 +189,25 @@
 
     <script>
       $("form").on("submit", function(event) {
-        console.log('were doing shit');
           event.preventDefault();
           
           var formData = $(this).serialize();
-          console.log(formData);
+         // console.log(formData);
+         // console.log($(this).attr("data-id"));
+
+          var ShelterId = $(this).attr("data-id");
+          console.log(ShelterId);
           
 
           console.log($("input[name=comment]").val());
+
+          $.post('/commentGrabber', formData, ShelterId).done(function(responseData) {
+            console.log(responseData);
+          });  
+
+
+          //send ajax with id and comment. match id and add to the comment params
+          //MONGOOSE LESSONS!!!!
       });
 
     </script>
