@@ -29,7 +29,7 @@ app.use(passport.initialize());
 app.use(passport.session()); 
 app.use(flash()); 
 
-require(__dirname+'/config/passport')(passport);
+require(__dirname+'/Config/passport')(passport);
 
 //let yelpToken = require('./controllers/yelp.js');
 //app.use(yelpToken);
@@ -39,7 +39,7 @@ app.use(function(req, res, next) {
 	next();
 });
 
-var routes = require(__dirname+'/config/routes');
+var routes = require(__dirname+'/Config/routes');
 app.use(routes);
 
 
