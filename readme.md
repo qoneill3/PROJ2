@@ -6,7 +6,10 @@ This is an app that is here to fix your pet search problems. No longer will you 
 
 ## Resources
 
+Link to App: https://rocky-beach-63528.herokuapp.com
+
 trello board: https://trello.com/b/AzjDHVUh/proj2
+
 
 ## Technology
 

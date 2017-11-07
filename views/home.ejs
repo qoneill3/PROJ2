@@ -18,6 +18,7 @@
 		#user-menu {
 
           padding-right: 50px;
+          width: 1140px;
           margin-right: 0px;
           background: black;
           color: white;
@@ -29,7 +30,7 @@
 
 		
 		#grid-layout {
-			margin-left: 16%;
+			margin-left: 8%;
 			border: 5px solid white;
 			width: 1140px;
 			background: #A6A0A0;
@@ -39,7 +40,7 @@
 
     #navbar-header {
       background: black;
-      min-width: 1140px;
+      width: 1140px;
       border: 2px solid white;
       color: white;
       display: inline;
@@ -115,6 +116,16 @@
           width: 250px;
         }
 
+        ul {
+          list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH6SURBVEhL7dVJSFVhGIfxk7XIBnQTZNMqUHDRsHBjNC4CM8IQRTfRthDaFLVRKCKXRRA0UNRGSiWCIBCCwIUkFYQLGzEHNCoVi0gqzOc5A7i43e490kr/8MPzfnKG7zvvd26w4LIGjdHh/8lhvMYkKhyIswQ3URRW80gVZvAWH/EZq2Ca8QefUO9A2vRgCKuxH160AZXxcRde4he2IFW+4E50GJTAC5/CVfxAMdbGx1eQV1zv5ejGGPbiArxJNToxjCTv8DA6zD1H4Em1mIAXVwcKcCKuLyG5eQtyziG4xp74E02ow044Q1MIl/E3bIwHcIYuaU55A7tpB17AmfytTVdiHc7jK9qxAlljezqDs2EVPZ31gbDKHC/sbHrjv/9sgGWwU+6GVdSu3uQgbOOjOIaNMOXw/61hFQRt+A7fW9ZchCc+xRTsLpfEZXRcjm+D78p6F8w5WPtAWbMULtdz2KplOANPrsFWuH/ux8eOX4cb9D1eIe+40z9gIKyi3MM4NuAWvJG+YR9yjjO6AU8exW4k2YNpOCPHbW/31ibkFV+wN7iG5KM4N74Tv2sjsGFSxQ02d4ky5Th8kM1hlSLOwHZcH1ZRW5bCj2KS23DXuylTxT2QrPsjDMKnduwJnsX1Zcwr2+Gy9eMxTsNu6oO/NSeR+n0sJkOCYBYlsH/hsO17AQAAAABJRU5ErkJggg==");
+          
+        }
+
+        li {
+          font-family: 'Bungee Inline';
+          border-bottom: 1px dashed black;
+        }
+
 	</style>
 </head>
 <body>
@@ -160,7 +171,7 @@
             <div data-id="<%=shelters[i]._id%>" class="card-body">
               <h4 class="card-title"><%=shelters[i].name%></h4>
               <h6 class="card-subtitle mb-2"><%=shelters[i].display_phone%> <br> <%=shelters[i].location.display_address%> <br> </h6>
-              <p><a id="web-btn" href="<%=shelters[i].url%>" class="btn btn-primary" target="_blank">Website</a></p>
+              <p><a id="web-btn" href="<%=shelters[i].url%>" class="btn btn-primary center-justify" target="_blank">Yelp Page</a></p>
             </div>
               
               
