@@ -7,11 +7,16 @@
     <title>PROJ 2</title>
 
     <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/index.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+
+    <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+
+    <!-- stylesheet(outsource this shit!!!!)-->
     <style>
-        body {
+       /* body {
           background: url('https://static.pexels.com/photos/406014/pexels-photo-406014.jpeg') no-repeat;
           background-size: cover;
         }
@@ -64,14 +69,17 @@
           border-radius: 10px 10px 10px 10px;
           display: none;
         }
-
+    */
     </style>
   </head>
   <body>
+    <!--header-->
     <% include ./partials/headers/header-index.ejs %>
-
+    
+    <!-- Site Title -->
     <h1 id="header-home">The Rescue Repository</h1>
     
+    <!--Sign-Up Form -->
     <div id="sign-up-form-container">
       <div class="sign-up-form">
         <form method="post" action="/signup">
@@ -101,7 +109,8 @@
 
     <script src="Public/scripts/app.js"></script>
 
-
+    
+    <!--Footer-->
     <% include ./partials/footer.ejs %>
     
  

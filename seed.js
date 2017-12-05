@@ -2,14 +2,15 @@ const request = require('request');
 require('dotenv').config();
 
 
-
+//require and connect mongoose
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/shelters');
 
+//require shelter model
 let Shelter = require("./models/shelter");
 
 
-
+//display Shelters function
 function displayShelters(token) {
 	
 	let options = {
@@ -44,6 +45,7 @@ function displayShelters(token) {
 }
 
 
+//get yelp api key
 function getToken() {
 	request.post({
 			url: "https://api.yelp.com/oauth2/token",

@@ -1,3 +1,4 @@
+//some initial set up
 var express = require('express');
 var app = express();
 var passport = require('passport');
@@ -19,10 +20,15 @@ require('dotenv').config();
 //app.use(require('require-sass'));
 
 app.set('views', path.join(__dirname, 'views'));
+app.set('public', path.join(__dirname, 'public'));
 app.engine('ejs', require('ejs').renderFile);
 app.set('view engine', 'ejs');
 
+
+//static//use public directory
 app.use(express.static(__dirname + '/public'));
+
+//app.use(express.static(__dirname+'/public'));
 
 app.use(session({secret: "puppy town"}));
 app.use(passport.initialize());
@@ -57,6 +63,8 @@ app.get('/', function homepage (req, res) {
 
 
 
+
+//run app on port 3000
 app.listen(process.env.PORT || 3000, function () {
   console.log('Express server is running on http://localhost:3000/');
 });
