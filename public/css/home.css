@@ -7,7 +7,7 @@
       background-image: url('http://moziru.com/images/dalmation-clipart-cute-2.gif');
     }
 
-    #user-menu {
+		#user-menu {
 
           padding-right: 50px;
           width: 1140px;
@@ -20,15 +20,15 @@
         }
 
 
-    
-    #grid-layout {
-      margin-left: 8%;
-      border: 5px solid white;
-      width: 1140px;
-      background: #A6A0A0;
-      background-size: cover;
-      border-radius: 30px;
-    }
+		
+		#grid-layout {
+			margin-left: 8%;
+			border: 5px solid white;
+			width: 1140px;
+			background: #A6A0A0;
+			background-size: cover;
+			border-radius: 30px;
+		}
 
     #navbar-header {
       background: black;

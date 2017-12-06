@@ -1,0 +1,88 @@
+body {
+          background: url('https://static.pexels.com/photos/406014/pexels-photo-406014.jpeg') no-repeat;
+          background-size: cover;
+        }
+        h1 {
+          font-family: 'Bungee Inline';
+          color: black;
+          text-shadow: 2px 2px 2px grey;
+          
+        }
+        #user-menu {
+          background: black;
+          margin-right: 0px;
+          border-radius: 10px 10px 10px 10px;
+        }
+
+        #nav-header {
+          margin-left: 20px;
+        }
+
+        #nav-items {
+          text-align: right;
+        }
+
+        #header-home {
+          font-size: 100px;
+        }
+         a {
+          left: 20px;
+          margin-left: 10px;
+          font-size: 20px;
+          color: white;
+          font-family: 'Bungee Inline';
+        }
+
+        #logout, #signup {
+          float: right;
+        }
+
+        h3 {
+          position: absolute;
+          top: -20%;
+          left: 10%;
+          font-family: 'Bungee Inline';
+          color: grey;
+        }
+
+        #sign-up-form-container {
+
+        }
+
+        .sign-up-form {
+          background: #F5B7B1;
+          height: 300px;
+          width: 350px; 
+          position: absolute;
+          float: right;
+          top: 10%;
+          left: 63%;
+          margin-top: 20px;
+          padding: 25px 25px 25px 25px;
+          border:  5px solid grey;
+          border-radius: 10px 10px 10px 10px;
+          box-shadow: 5px 5px 5px black;
+          
+        }
+
+        #password-field {
+          text-decoration: underline;
+          color: grey;
+        }
+
+        #email-field {
+          text-decoration: underline;
+          color: grey;
+        }
+
+        #email {
+          border: 2px solid grey;
+        }
+
+        #password {
+          border: 2px solid grey;
+        }
+
+        #submit-btn {
+          border: 2px solid grey;
+      

@@ -25,7 +25,7 @@ Shelter-Page:
 ![alt text](images/shelter-page.png "Shelter-Page")
 
 
-## Goals and Objectives
+## Mission
 
 This is an app that will connect you to local shelters and will give you an inventory of who might be housed there at the time, when that particular animal was brought in, and how long they have been in the shelter. People will be able to shop around from the comfort of their own home to get a good idea of what kind of dogs and cats are out there and how they can go about connecting with them. Visits can often be stressful and not everyone has the time in their day to visit with every animal. With the Rescue Repo we will show you all kinds of animals for you to easily search through, in order to expedite the amount of time you spend at the shelter. Having a few animals in particular in mind BEFORE visiting the shelter can provide some direction and incentive to your pet search. View images and descriptions before you even get out the door. Our aim is to improve your quality of life by connecting you with your perfect pet!
 
